@@ -1,5 +1,8 @@
 package domain.estacion;
 
+import java.util.Arrays;
+import java.util.Optional;
+
 public class Estacion {
 
     private final int id;
@@ -32,10 +35,22 @@ public class Estacion {
         System.out.println(this);
     }
 
+    public long anclajesLibres() {
+        return Arrays.stream(anclajes()).filter(a -> !a.isOcupado()).count();
+    }
+
+    public void consultarAnclajes() {
+        Arrays.stream(anclajes()).map(a -> Optional.ofNullable(a.getBici()))
+                .forEach(bici -> System.out.print("Anclaje " +
+                        (((Optional<?>) bici).isPresent()? ((Optional<?>) bici).get(): "libre")
+                        + '\n'));
+    }
+
     @Override
     public String toString() {
         return String.format("id: %d \ndireccion: %s \nanclajes: %s",
                 getId(), getDireccion(), numAnclajes());
     }
+
 
 }

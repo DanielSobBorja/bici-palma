@@ -23,11 +23,11 @@ public class BiciPalma {
 		 * caso TEST visualizar anclajes libres
 		 */
 
-//		System.out.println("\n **** caso TEST visualizar anclajes libres **** \n");
-//
-//		System.out.println("anclajesLibres: " + estacion.anclajesLibres());
-//
-//		estacion.consultarAnclajes();
+		System.out.println("\n **** caso TEST visualizar anclajes libres **** \n");
+
+		System.out.println("anclajesLibres: " + estacion.anclajesLibres());
+
+		estacion.consultarAnclajes();
 
 		/**
 		 * caso TEST anclar bicicleta(s) 
