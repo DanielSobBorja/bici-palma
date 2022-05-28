@@ -1,7 +1,8 @@
 package domain.estacion;
 
-import domain.bicicleta.Bicicleta;
 import domain.bicicleta.Movil;
+import domain.tarjetausuario.Autenticacion;
+import domain.tarjetausuario.TarjetaUsuario;
 
 import java.util.Arrays;
 import java.util.Optional;
@@ -65,4 +66,29 @@ public class Estacion {
             System.out.println("No existen anclajes disponibles para bici " + bici);
         }
     }
+
+    public boolean leerTarjetaUsuario(Autenticacion tarjetaUsuario) {
+        return tarjetaUsuario.isActivada();
+    }
+
+    public void retirarBicicleta(Autenticacion tarjetaUsuario) {
+        if (leerTarjetaUsuario(tarjetaUsuario)) {
+            Optional<Anclaje> anclajeOcupado = Arrays.stream(anclajes()).filter(Anclaje::isOcupado).findAny();
+
+            if (anclajeOcupado.isPresent()) {
+                mostrarBicicleta(anclajeOcupado.get().getBici());
+                anclajeOcupado.get().liberarBici();
+            } else {
+                System.out.println("No hay bicis");
+            }
+
+        } else {
+            System.out.println("Tarjeta de usuario inactiva :(");
+        }
+    }
+
+    private void mostrarBicicleta(Movil bici) {
+        System.out.println("bicicleta retirada: " + bici.getId());
+    }
+
 }

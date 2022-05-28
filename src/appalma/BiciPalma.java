@@ -2,7 +2,7 @@ package appalma;
 
 import domain.bicicleta.Bicicleta;
 import domain.estacion.Estacion;
-//import domain.tarjetausuario.TarjetaUsuario;
+import domain.tarjetausuario.TarjetaUsuario;
 
 public class BiciPalma {
 
@@ -50,40 +50,40 @@ public class BiciPalma {
 		 * Caso TEST consultar bicicletas ancladas 
 		 */
 
-//		System.out.println("\n **** caso TEST consultar bicicletas ancladas **** \n");
-//
-//		estacion.consultarAnclajes();
-//
-//		/**
-//		 * Caso TEST retirar bicicleta
-//		 */
-//
-//		System.out.println("\n **** caso TEST retirar bicicleta **** \n");
-//
-//		TarjetaUsuario tarjetaUsuario = new TarjetaUsuario("000456789", true);
-//
-//		System.out.println("¿tarjeta de usuario activada? (true/false): "
-//							+ estacion.leerTarjetaUsuario(tarjetaUsuario));
-//
-//		estacion.retirarBicicleta(tarjetaUsuario);
-//
-//		estacion.consultarAnclajes();
-//
-//		System.out.println("anclajes libres: " + estacion.anclajesLibres());
+		System.out.println("\n **** caso TEST consultar bicicletas ancladas **** \n");
+
+		estacion.consultarAnclajes();
+
+		/**
+		 * Caso TEST retirar bicicleta
+		 */
+
+		System.out.println("\n **** caso TEST retirar bicicleta **** \n");
+
+		TarjetaUsuario tarjetaUsuario = new TarjetaUsuario("000456789", true);
+
+		System.out.println("¿tarjeta de usuario activada? (true/false): "
+							+ estacion.leerTarjetaUsuario(tarjetaUsuario));
+
+		estacion.retirarBicicleta(tarjetaUsuario);
+
+		estacion.consultarAnclajes();
+
+		System.out.println("anclajes libres: " + estacion.anclajesLibres());
 
 		/**
 		 * Caso TEST tarjeta inactiva 
 		 */
 
-//		System.out.println("\n **** caso TEST tarjeta inactiva **** \n");
-//
-//		tarjetaUsuario.setActivada(false);
-//
-//		System.out.println("¿tarjeta de usuario activada? (true/false): "
-//							+ estacion.leerTarjetaUsuario(tarjetaUsuario));
-//
-//		estacion.retirarBicicleta(tarjetaUsuario);
-//
-//		estacion.consultarAnclajes();
+		System.out.println("\n **** caso TEST tarjeta inactiva **** \n");
+
+		tarjetaUsuario.setActivada(false);
+
+		System.out.println("¿tarjeta de usuario activada? (true/false): "
+							+ estacion.leerTarjetaUsuario(tarjetaUsuario));
+
+		estacion.retirarBicicleta(tarjetaUsuario);
+
+		estacion.consultarAnclajes();
 	}
 }
