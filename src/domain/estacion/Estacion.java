@@ -1,5 +1,8 @@
 package domain.estacion;
 
+import domain.bicicleta.Bicicleta;
+import domain.bicicleta.Movil;
+
 import java.util.Arrays;
 import java.util.Optional;
 
@@ -53,4 +56,13 @@ public class Estacion {
     }
 
 
+    public void anclarBicicleta(Movil bici) {
+        Optional<Anclaje> anclajeLibre = Arrays.stream(anclajes()).filter(a -> !a.isOcupado()).findAny();
+
+        if (anclajeLibre.isPresent()) {
+            anclajeLibre.get().anclarBici(bici);
+        } else {
+            System.out.println("No existen anclajes disponibles para bici " + bici);
+        }
+    }
 }

@@ -1,6 +1,6 @@
 package appalma;
 
-//import domain.bicicleta.Bicicleta;
+import domain.bicicleta.Bicicleta;
 import domain.estacion.Estacion;
 //import domain.tarjetausuario.TarjetaUsuario;
 
@@ -33,18 +33,18 @@ public class BiciPalma {
 		 * caso TEST anclar bicicleta(s) 
 		 */
 
-//		System.out.println("\n **** caso TEST anclar bicicleta(s) **** \n");
-//
-//		int[] bicicletas = { 291, 292, 293, 294, 295, 296, 297 };
-//
-//		Bicicleta bicicleta = null;
-//		for (int id : bicicletas) {
-//			bicicleta = new Bicicleta(id);
-//			estacion.anclarBicicleta(bicicleta);
-//		}
-//
-//		System.out.println("anclajes libres tras generar " + bicicletas.length
-//							+ " bicis: " + estacion.anclajesLibres());
+		System.out.println("\n **** caso TEST anclar bicicleta(s) **** \n");
+
+		int[] bicicletas = { 291, 292, 293, 294, 295, 296, 297 };
+
+		Bicicleta bicicleta = null;
+		for (int id : bicicletas) {
+			bicicleta = new Bicicleta(id);
+			estacion.anclarBicicleta(bicicleta);
+		}
+
+		System.out.println("anclajes libres tras generar " + bicicletas.length
+							+ " bicis: " + estacion.anclajesLibres());
 
 		/**
 		 * Caso TEST consultar bicicletas ancladas 

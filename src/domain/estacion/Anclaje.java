@@ -15,4 +15,9 @@ public class Anclaje {
     Movil getBici() {
         return this.bici;
     }
+
+    public void anclarBici(Movil bici) {
+        this.bici = bici;
+        this.ocupado = true;
+    }
 }

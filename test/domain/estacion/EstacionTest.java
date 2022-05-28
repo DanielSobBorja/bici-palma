@@ -6,7 +6,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-//import domain.bicicleta.Bicicleta;
+import domain.bicicleta.Bicicleta;
 //import domain.tarjetausuario.TarjetaUsuario;
 
 public class EstacionTest {
@@ -20,26 +20,26 @@ public class EstacionTest {
 
     @Test
     public void anclajesLibresTest() {
-//        Estacion estacion = new Estacion(1, "Manacor", 6);
-//        assertEquals(6, estacion.anclajesLibres());
-//
-//        estacion = new Estacion(1, "Manacor", 0);
-//        assertEquals(0, estacion.anclajesLibres());
+        Estacion estacion = new Estacion(1, "Manacor", 6);
+        assertEquals(6, estacion.anclajesLibres());
+
+        estacion = new Estacion(1, "Manacor", 0);
+        assertEquals(0, estacion.anclajesLibres());
     }
     
     @Test
     public void anclarBicicletaTest() {
-//        Estacion estacion = new Estacion(1, "Manacor", 6);
-//        estacion.anclarBicicleta(new Bicicleta(911));
-//        assertEquals(5, estacion.anclajesLibres());
-//        // cubrir branch del stream
-//        estacion.anclarBicicleta(new Bicicleta(922));
-//        assertEquals(4, estacion.anclajesLibres());
-//
-//        // cubrir else
-//        estacion = new Estacion(1, "Manacor", 0);
-//        estacion.anclarBicicleta(new Bicicleta(911));
-//        assertEquals(0, estacion.anclajesLibres());
+        Estacion estacion = new Estacion(1, "Manacor", 6);
+        estacion.anclarBicicleta(new Bicicleta(911));
+        assertEquals(5, estacion.anclajesLibres());
+        // cubrir branch del stream
+        estacion.anclarBicicleta(new Bicicleta(922));
+        assertEquals(4, estacion.anclajesLibres());
+
+        // cubrir else
+        estacion = new Estacion(1, "Manacor", 0);
+        estacion.anclarBicicleta(new Bicicleta(911));
+        assertEquals(0, estacion.anclajesLibres());
     }
 
     @Test
